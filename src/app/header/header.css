@@ -1,0 +1,48 @@
+.modern-header {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #1e293b 100%);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(79, 70, 229, 0.2) 0%, transparent 60%);
+    z-index: 0;
+}
+
+.modern-header h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.modern-header p {
+    position: relative;
+    z-index: 1;
+    color: #cbd5e1;
+    font-size: 1.1rem;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+    z-index: 1;
+}
+
+.social-icons a:hover {
+    color: var(--primary-color);
+    transform: translateY(-3px);
+}

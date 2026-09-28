@@ -1,0 +1,92 @@
+<section id="seccion3" class="container">
+    <h2>Regístrate Ahora</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-10 col-lg-8">
+            <form class="modern-form" id="formularioContacto" [formGroup]="formularioContacto" (ngSubmit)="validarFormulario()" novalidate>
+                <div class="text-center mb-4">
+                    <h3 class="mb-3">Formulario de Afiliación</h3>
+                    <p class="lead text-muted">Únete a nuestra clínica para agendar citas y recibir beneficios
+                        exclusivos.</p>
+                </div>
+
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="identificacion" class="form-label">Tipo de Identificación:</label>
+                        <select id="identificacion" formControlName="identificacion" class="form-select"
+                            [class.is-invalid]="esCampoInvalido('identificacion')">
+                            <option value="" disabled selected>Seleccione un tipo</option>
+                            <option value="cc">Cédula de Ciudadanía</option>
+                            <option value="ti">Tarjeta de Identidad</option>
+                            <option value="ce">Cédula de Extranjería</option>
+                            <option value="pas">Pasaporte</option>
+                        </select>
+                        <div class="text-danger small mt-1" id="errorTipoIdentificacion" *ngIf="esCampoInvalido('identificacion')">
+                            {{ obtenerError('identificacion') }}
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="numero-identificacion" class="form-label">Número de Identificación:</label>
+                        <input type="text" id="numero-identificacion" formControlName="numeroIdentificacion" class="form-control"
+                            [class.is-invalid]="esCampoInvalido('numeroIdentificacion')" placeholder="123456789">
+                        <div class="text-danger small mt-1" id="errorNumeroIdentificacion" *ngIf="esCampoInvalido('numeroIdentificacion')">
+                            {{ obtenerError('numeroIdentificacion') }}
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="nombres" class="form-label">Nombres:</label>
+                        <input type="text" id="nombres" formControlName="nombres" class="form-control"
+                            [class.is-invalid]="esCampoInvalido('nombres')" placeholder="Tus nombres">
+                        <div class="text-danger small mt-1" id="errorNombres" *ngIf="esCampoInvalido('nombres')">
+                            {{ obtenerError('nombres') }}
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="apellidos" class="form-label">Apellidos:</label>
+                        <input type="text" id="apellidos" formControlName="apellidos" class="form-control"
+                            [class.is-invalid]="esCampoInvalido('apellidos')" placeholder="Tus apellidos">
+                        <div class="text-danger small mt-1" id="errorApellidos" *ngIf="esCampoInvalido('apellidos')">
+                            {{ obtenerError('apellidos') }}
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label for="correo-electronico" class="form-label">Correo Electrónico:</label>
+                        <input type="email" id="correo-electronico" formControlName="correoElectronico" class="form-control"
+                            [class.is-invalid]="esCampoInvalido('correoElectronico')" placeholder="ejemplo@unicauca.edu.co">
+                        <div class="form-text text-muted">Debe utilizar el dominio &#64;unicauca.edu.co</div>
+                        <div class="text-danger small mt-1" id="errorCorreo" *ngIf="esCampoInvalido('correoElectronico')">
+                            {{ obtenerError('correoElectronico') }}
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 mt-3">
+                        <label class="form-label d-block">Género:</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="femenino" formControlName="genero" value="femenino">
+                            <label class="form-check-label" for="femenino">Femenino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="masculino" formControlName="genero" value="masculino">
+                            <label class="form-check-label" for="masculino">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="otro" formControlName="genero" value="otro">
+                            <label class="form-check-label" for="otro">Otro</label>
+                        </div>
+                        <div class="text-danger small mt-1" id="errorGenero" *ngIf="esCampoInvalido('genero')">
+                            {{ obtenerError('genero') }}
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-4 d-flex justify-content-start">
+                        <button type="submit" id="btnRegistrar" class="btn btn-primary btn-lg w-100"><i
+                                class="fas fa-paper-plane me-2"></i> Registrarme</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

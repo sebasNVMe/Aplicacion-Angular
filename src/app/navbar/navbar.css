@@ -1,0 +1,21 @@
+.glass-navbar {
+    background: rgba(15, 23, 42, 0.8) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.glass-navbar .nav-link {
+    color: #cbd5e1 !important;
+    font-weight: 600;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+
+.glass-navbar .nav-link:hover,
+.glass-navbar .nav-link.active {
+    color: #fff !important;
+}

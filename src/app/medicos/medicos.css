@@ -1,0 +1,49 @@
+.modern-card {
+    border: none;
+    border-radius: 16px;
+    background: var(--card-bg);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    height: 100%;
+}
+
+.modern-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.modern-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.modern-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.modern-card .card-title {
+    color: var(--dark-bg);
+    font-size: 1.25rem;
+}
+
+
+.list-group-item {
+    border: none;
+    border-radius: 8px !important;
+    margin-bottom: 0.5rem;
+    background-color: white;
+    color: var(--text-main);
+    font-weight: 500;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.list-group-item:hover,
+.list-group-item.active {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateX(5px);
+}
